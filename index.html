@@ -288,7 +288,6 @@ const channelData = [
 
 ];
 
-
 // ==========================================
 // MEMBUAT 8 SALURAN
 // ==========================================
@@ -346,24 +345,19 @@ channelData.forEach((channel, index) => {
 
 });
 
-
 // ==========================================
 // KLIK DI LUAR SALURAN MEMBUKA IKLAN
 // ==========================================
 
-// Link iklan untuk klik di luar saluran.
 const OUTSIDE_AD =
   "https://arwf.org/4/d566a5b59c764899cc8a30bc6a8cf69e";
 
 document.addEventListener("click", function(event) {
 
-  // Jika klik berada di dalam saluran,
-  // gunakan link iklan milik saluran tersebut.
   if (event.target.closest(".channel")) {
     return;
   }
 
-  // Klik di luar saluran membuka iklan.
   window.open(
     OUTSIDE_AD,
     "_blank",
@@ -373,6 +367,46 @@ document.addEventListener("click", function(event) {
 });
 
 </script>
+
+<!-- ====================================== -->
+<!-- HISTATS COUNTER -->
+<!-- ====================================== -->
+
+<div id="histats_counter"></div>
+
+<script type="text/javascript">
+var _Hasync = _Hasync || [];
+
+_Hasync.push([
+  'Histats.start',
+  '1,5062334,4,9,110,60,00011111'
+]);
+
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+
+(function() {
+  var hs = document.createElement('script');
+  hs.type = 'text/javascript';
+  hs.async = true;
+  hs.src = '//s10.histats.com/js15_as.js';
+
+  (document.getElementsByTagName('head')[0] ||
+   document.getElementsByTagName('body')[0]).appendChild(hs);
+})();
+</script>
+
+<noscript>
+  <a href="/" target="_blank">
+    <img
+      src="//sstatic1.histats.com/0.gif?5062334&101"
+      alt="free hit counter code"
+      border="0"
+    >
+  </a>
+</noscript>
+
+<!-- AKHIR HISTATS COUNTER -->
 
 </body>
 </html>
